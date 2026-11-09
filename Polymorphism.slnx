@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Polymorphism/Polymorphism.vcxproj" Id="f0d2b7ec-c527-42fc-8bbb-92f351c3026b" />
+</Solution>
