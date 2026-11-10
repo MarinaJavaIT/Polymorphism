@@ -23,28 +23,71 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+
+
 class Animal {
 public:
+	// переделать переопределить override
 	virtual void speak() const {          // virtual → dynamic dispatch
 		std::cout << "Some animal sound\n";
+
 	}
 	virtual ~Animal() = default;           // virtual destructor (see #3)
 };
-class Dog : public Animal {
+class Dog : public Animal {// data types
 public:
-	void speak() const override { std::cout << "Woof!\n"; }
+	explicit
+	virtual void speak() const override { 
+		std::cout << "Woof!\n"; 
+	}
 };
 class Cat : public Animal {
 public:
-	void speak() const override { std::cout << "Meow!\n"; }
+	void speak() const override { 
+		std::cout << "Meow!\n"; }
 };
 
-int q3_0() {
-	std::vector<std::unique_ptr<Animal>> zoo;
+
+
+
+
+
+
+int q3_0() {//smart array STL
+
+
+	Animal* p;
+	p = new Dog();
+	p->speak();
+	p = new Cat();
+	p->speak();
+	p = new Dog();
+	p->speak();
+
+
+
+	std::vector<std::unique_ptr<Animal>> zoo;//
+	//int arr[100];
 	zoo.push_back(std::make_unique<Dog>());
 	zoo.push_back(std::make_unique<Cat>());
-	for (const auto& a : zoo)
-		a->speak();     // resolved at runtime: Dog→Woof, Cat→Meow
+	zoo.push_back(std::make_unique<Cat>());
+	zoo.push_back(std::make_unique<Cat>());
+	zoo.push_back(std::make_unique<Cat>());
+	zoo.push_back(std::make_unique<Cat>());
+	zoo.push_back(std::make_unique<Cat>());
+
+
+
+
+
+
+	for (const auto& a : zoo)//[0] [1] [2]
+		a->speak();     
+	
+	
+	
+	
+	// resolved at runtime: Dog→Woof, Cat→Meow
 }
 //** Output:**
 //Woof!

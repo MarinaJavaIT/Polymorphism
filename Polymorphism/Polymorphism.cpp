@@ -1,10 +1,25 @@
 // Polymorphism.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+//
+
+// connect program stream DB
+// connect program stream FILE
+
+Dog.speak
+Cat.speak
+Cat1.speak
+Cat11.speak
+Cat111.speak
+Cat111.speak
 
 #include <iostream>
 
 int main()
 {
+    for (int i = 0; i < 0;array[i++]) {
+       // small   compiler.exe gcc clang
+            (*Animal).speak()
+    }
     std::cout << "Hello World!\n";   
 }
 
